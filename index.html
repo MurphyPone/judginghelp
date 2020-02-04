@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <div class="row"><img src="tyjs.png" style="height: 100px;" alt="Italian Trulli"></div>
+    <center style="padding: 10px;">
+        <img src="https://media3.giphy.com/media/l2JdYkTPVG9gRbvhK/giphy.gif" style="height: 70px;" alt=""> 
+        <img src="https://media1.giphy.com/media/T8xHOugClPHm8/giphy.gif" style="height: 70px;" alt="Kat selecting winners">
+        <img src="tyjs.png" style="height: 100px;" alt="Italian Trulli">
+        <img src="https://media.giphy.com/media/AjxVvHHcRHK6s/giphy.gif" style="height: 70px;" alt="Kat selecting winners">
+        <img src="https://media.giphy.com/media/TEkOxUF8UQuE8CpRAB/giphy.gif" style="height: 70px;" alt="judging running on schedule"> 
+    </center>
     <div class="row">
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="teams">Number of Teams</label>
@@ -25,11 +31,13 @@
                     <label for="minutes">Length of Expo</label>
                     <input type="text" class="form-control" id="minutes" placeholder="Minutes">
             </div>
-            <button onclick="calculate()" class="btn btn-primary">Submit</button>
+            <button onclick="calculate()" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <br>
         </div>
     </div>
-    <div class="col-md-12">
-        <div class="col-md-12" id="judge-groups"></div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="judge-groups"></div>
     </div>
 </body>
 <script>
@@ -53,7 +61,7 @@
 
         judge = 0;
 
-        for(round = 1 ; round < (parseInt(rounds) + 1) ; round++) {
+        for(round = 1; round < (parseInt(rounds) + 1) ; round++) {
             team = 1;
             for(var team = 1 ; team < (parseInt(teams) + 1); team++) {
                 while(judgeGroup[judge].includes(team)) {
